@@ -134,44 +134,7 @@
     }
 
     /* Posts */
-    .post {
-      margin-bottom: 40px;
-      animation: slide-up 0.5s ease-out;
-    }
-
-    @keyframes slide-up {
-      0% { transform: translateY(100%); }
-      100% { transform: translateY(0); }
-    }
-
-    .post img {
-      width: 100%;
-      height: auto;
-    }
-
-    .post .post-info {
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .post .post-info .likes,
-    .post .post-info .comments {
-      display: flex;
-      align-items: center;
-    }
-
-    .post .post-info .likes i,
-    .post .post-info .comments i {
-      margin-right: 5px;
-    }
-
-    .post .post-info .likes span,
-    .post .post-info .comments span {
-      font-size: 14px;
-      margin-left: 5px;
-    }
+    
 
     /* Comments section */
     .comments-section {
@@ -354,10 +317,112 @@
       color: pink;
     }
     
+    .feed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+      margin-bottom: 20px; /* Optional: Add some margin between posts */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+   
+    
+    
+    .post {
+      width: calc(33.33% - 20px);
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      margin-bottom: 20px; /* Optional: Add some margin between posts */
+    }
+    
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    .user-avatar {
+      
+     
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 10px;
+      
+      
+      
+      
+    }
+    
+    .username {
+      font-weight: bold;
+    }
+    
+    .post-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+    
+    .post-details {
+      padding: 10px;
+    }
+    
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .post-actions button {
+      background-color: transparent;
+      border: none;
+      color: #777;
+      cursor: pointer;
+    }
+    
+    .like-button i {
+      color: #ff5c5c;
+      margin-right: 5px;
+    }
+    
+    .comment-button i {
+      color: #777;
+      margin-right: 5px;
+    }
+    
+    .post-caption {
+      margin-bottom: 10px;
+    }
+    
+    .comments {
+      margin-bottom: 10px;
+    }
+    
+    .comment {
+      margin-bottom: 5px;
+    }
+    
+    .comment .username {
+      font-weight: bold;
+    }
+    
+    
+    
+    
   
   </style>
 </head>
 <body>
+
+  
   <header>
     <div class="logo">
       <img src="logo.png" alt="Octane Logo">
@@ -392,213 +457,155 @@
         <p>Add Story</p>
       </div>
     </div>
-
-    <div class="instagram-section">
-      <h2>Recent Posts</h2>
-
+    <div class="post-container">
+      <!-- Your posts go here -->
+    
+    <center>
+    <div class="feed">
       <div class="post">
-        <div class="comment">
-          <img src="user1.jpg" alt="User 1">
-          <p>Welcome to Octane people!!!</p>
-        </div>
-        <img src="post1.jpg" alt="Post 1">
-        <div class="post-info">
-          <div class="likes">
-            <i class="fas fa-heart"></i>
-            <span>245</span>
-          </div>
-          <div class="comments">
-            <i class="fas fa-comment"></i>
-            <span>32</span>
-          </div>
-        </div>
-        <div class="comments-section">
-          <div class="comment">
-            <img src="user1.jpg" alt="User 1">
-            <p>yep!</p>
-          </div>
-          <div class="comment">
-            <img src="user2.jpg" alt="User 2">
-            <p>damn son</p>
-          </div>
-          <div class="comment">
-            <img src="user3.jpg" alt="User 3">
-            <p>nice</p>
-          </div>
-          <div class="comment">
-            <img src="user4.jpg" alt="User 4">
-            <p>gg</p>
-          </div>
-
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              var heartIcon = document.querySelector('.fa-heart');
         
-              heartIcon.addEventListener('click', function() {
-                heartIcon.classList.toggle('heart-pink');
-              });
-            });
-          </script>
-         
-
-     
-      
-          <div class="comment">
-            <img src="user2.jpg" alt="User 1">
-            <p>made something delicious!</p>
+        <div class="post-header">
+          <img class="user-avatar" src="user1.jpg" alt="User Avatar">
+          <span class="username">arc</span>
+        </div>
+        <img class="post-image" src="post1.jpg" alt="Post 1">
+        <div class="post-details">
+          <div class="post-actions">
+            <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+            <button class="comment-button"><i class="fas fa-comment"></i> Comment</button>
           </div>
-        <img src="post2.jpg" alt="Post 2">
-        <div class="post-info">
-          <div class="likes">
-            <i class="fas fa-heart"></i>
-            <span>123</span>
+          <div class="post-caption">
+            <span class="username"></span> Welcome to @Octane!
           </div>
           <div class="comments">
-            <i class="fas fa-comment"></i>
-            <span>45</span>
-          </div>
-        </div>
-        <div class="comments-section">
-          <div class="comment">
-            <img src="user1.jpg" alt="User 1">
-            <p>nice!</p>
-          </div>
-          <div class="comment">
-            <img src="user2.jpg" alt="User 2">
-            <p>damn</p>
-          </div>
-          <div class="comment">
-            <img src="user3.jpg" alt="User 3">
-            <p>good job</p>
-          </div>
-          <div class="comment-input">
-            <img src="user1.jpg" alt="User 1">
-            <input type="text" placeholder="Add a comment">
+            <div class="comment">
+              <span class="username">User1:</span> damn
+            </div>
+            <div class="comment">
+              <span class="username">User2:</span> thank you:)
+            </div>
           </div>
         </div>
       </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var heartIcon = document.querySelector('.fa-heart');
-    
-          heartIcon.addEventListener('click', function() {
-            heartIcon.classList.toggle('heart-pink');
-          });
-        });
-      </script>
 
-      <div class="post">
+      <div class="feed">
         <div class="post">
-          <div class="comment">
-            <img src="user1.jpg" alt="User 1">
-            <p>hey my anime art!</p>
+          
+          <div class="post-header">
+            <img class="user-avatar" src="user2.jpg" alt="User Avatar">
+            <span class="username">smriti</span>
           </div>
-        <img src="post3.jpg" alt="Post 3">
-        <div class="post-info">
-          <div class="likes">
-            <i class="fas fa-heart"></i>
-            <span>78</span>
-          </div>
-          <div class="comments">
-            <i class="fas fa-comment"></i>
-            <span>10</span>
+          <img class="post-image" src="post2.jpg" alt="Post 1">
+          <div class="post-details">
+            <div class="post-actions">
+              <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+              <button class="comment-button"><i class="fas fa-comment"></i> Comment</button>
+            </div>
+            <div class="post-caption">
+              <span class="username"></span> made a delicious pizza with my mother :) 
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <span class="username">User1:</span>damn.
+              </div>
+              <div class="comment">
+                <span class="username">smriti:</span> thanks
+              </div>
+            </div>
           </div>
         </div>
-        <div class="comments-section">
-          <div class="comment">
-            <img src="user3.jpg" alt="User 1">
-            <p>make sure to focus on coloring</p>
-          </div>
-          <div class="comment-input">
-            <img src="user1.jpg" alt="User 1">
-            <input type="text" placeholder="Add a comment">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="post">
-      <div class="post">
-        <div class="comment">
-          <img src="post4.jpg" alt="User 1">
-          <p>hey my anime art! much better than yours lol</p>
-        </div>
-      <img src="post4.jpg" alt="Post 3">
-      <div class="post-info">
-        <div class="likes">
-          <i class="fas fa-heart"></i>
-          <span>69</span>
-        </div>
-        <div class="comments">
-          <i class="fas fa-comment"></i>
-          <span>10</span>
-        </div>
       </div>
-      <div class="comments-section">
-        <div class="comment">
-          <img src="user1.jpg" alt="User 1">
-          <p>nice</p>
-        </div>
-        
-      </div>
-    </div>
-  </div>
 
-  <div class="post">
-    <div class="post">
-      <div class="comment">
-        <img src="user1.jpg" alt="User 1">
-        <p>me+me=memes</p>
-      </div>
-    <img src="post5.jpg" alt="Post 3">
-    <div class="post-info">
-      <div class="likes">
-        <i id="heart-icon" class="fas fa-heart"></i>
+      <div class="feed">
+        <div class="post">
+          
+          <div class="post-header">
+            <img class="user-avatar" src="user3.jpg" alt="User Avatar">
+            <span class="username">anime__Lover.</span>
+          </div>
+          <img class="post-image" src="post4.jpg" alt="Post 1">
+          <div class="post-details">
+            <div class="post-actions">
+              <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+              <button class="comment-button"><i class="fas fa-comment"></i> Comment</button>
+            </div>
+            <div class="post-caption">
+              <span class="username"></span> made a delicious pizza with my mother :) 
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <span class="username">User1:</span>damn.
+              </div>
+              <div class="comment">
+                <span class="username">smriti:</span> thanks
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <span>204</span>
       </div>
-      <div class="comments">
-        <i class="fas fa-comment"></i>
-        <span>10</span>
+
+      <div class="feed">
+        <div class="post">
+          
+          <div class="post-header">
+            <img class="user-avatar" src="user3.jpg" alt="User Avatar">
+            <span class="username">memes.</span>
+          </div>
+          <img class="post-image" src="post5.jpg" alt="Post 1">
+          <div class="post-details">
+            <div class="post-actions">
+              <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+              <button class="comment-button"><i class="fas fa-comment"></i> Comment</button>
+            </div>
+            <div class="post-caption">
+              <span class="username"></span> me+me= memes XD
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <span class="username">User1:</span>lol
+              </div>
+              <div class="comment">
+                <span class="username">smriti:</span> XD
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="comments-section">
-      <div class="comment">
-        <img src="post4.jpg" alt="User 1">
-        <p>lloolllll</p>
+
+      <div class="feed">
+        <div class="post">
+          
+          <div class="post-header">
+            <img class="user-avatar" src="post6.jpg" alt="User Avatar">
+            <span class="username">anime__Lover.</span>
+          </div>
+          <img class="post-image" src="post6.jpg" alt="Post 1">
+          <div class="post-details">
+            <div class="post-actions">
+              <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+              <button class="comment-button"><i class="fas fa-comment"></i> Comment</button>
+            </div>
+            <div class="post-caption">
+              <span class="username"></span> anya  :) 
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <span class="username">User1:</span>damn.
+              </div>
+              <div class="comment">
+                <span class="username">smriti:</span> thanks
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       
-    </div>
-  </div>
-</div>
-
-
-<div class="post">
-  <div class="post">
-    <div class="comment">
-      <img src="post6.jpg" alt="User 1">
-      <p>my fav character!!!!!!!!</p>
-    </div>
-  <img src="post6.jpg" alt="Post 3">
-  <div class="post-info">
-    <div class="likes">
-      <i class="fas fa-heart"></i>
-      <span>56+</span>
-    </div>
-    <div class="comments">
-      <i class="fas fa-comment"></i>
-      <span>10</span>
-    </div>
-  </div>
-  <div class="comments-section">
-    <div class="comment">
-      <img src="user2.jpg" alt="User 1">
-      <p>mine too</p>
-    </div>
-    
-  </div>
-</div>
-</div>
+      
+    </center>
 
 
     <div class="instagram-section">
