@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Octane - Fueling Connections, Igniting Conversations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    /* CSS styles go here */
+    /* Add your CSS code to customize the appearance */
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      animation: slide-down 0.5s ease-out;
+    }
+
+    @keyframes slide-down {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(0); }
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    nav {
+      text-align: right;
+    }
+
+    nav a {
+      color: #333333;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    /* Main content */
+    main {
+      margin: 20px;
+    }
+
+    /* Stories */
+    .stories {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      animation: fade-in 0.5s ease-out;
+    }
+
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .story {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .story img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      animation: pulse 1s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .story p {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .add-story {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      color: #888888;
+      animation: bounce-in 1s ease-out;
+    }
+
+    @keyframes bounce-in {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .add-story i {
+      color: #ff69b4;
+    }
+
+    .add-story:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    /* Instagram section */
+    .instagram-section {
+      background-color: #fafafa;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fade-in 0.5s ease-out;
+    }
+
+    .instagram-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Posts */
+    .post {
+      margin-bottom: 40px;
+      animation: slide-up 0.5s ease-out;
+    }
+
+    @keyframes slide-up {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(0); }
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+    }
+
+    .post .post-info {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .post .post-info .likes,
+    .post .post-info .comments {
+      display: flex;
+      align-items: center;
+    }
+
+    .post .post-info .likes i,
+    .post .post-info .comments i {
+      margin-right: 5px;
+    }
+
+    .post .post-info .likes span,
+    .post .post-info .comments span {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    /* Comments section */
+    .comments-section {
+      margin-top: 20px;
+    }
+
+    .comment {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .comment img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .comment p {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .comment-input {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .comment-input img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .comment-input input {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    /* Direct messages */
+    .direct-messages {
+      margin-top: 40px;
+    }
+
+    .direct-message {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .direct-message img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .direct-message p {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .instagram-section {
+      background-color: #fafafa;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fade-in 0.5s ease-out;
+    }
+
+    .instagram-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .instagram-item {
+      position: relative;
+    }
+
+    .instagram-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      animation: fade-in 1s ease-out;
+    }
+
+    .instagram-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .instagram-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .instagram-item .overlay i {
+      color: #ffffff;
+      font-size: 30px;
+    }
+
+    .option-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #dddddd;
+      z-index: 999;
+      animation: slide-up 0.5s ease-out;
+    }
+
+    @keyframes slide-up {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(0); }
+    }
+
+    .option-bar i {
+      font-size: 24px;
+      color: #888888;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .option-bar i:hover {
+      color: #333333;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .overlay-content i {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .heart-pink {
+      color: pink;
+    }
+    
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Octane Logo">
+    </div>
+    <nav>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="stories">
+      <div class="story">
+        <img src="user1.jpg" alt="User 1">
+        <p>User 1</p>
+      </div>
+      <div class="story">
+        <img src="user2.jpg" alt="User 2">
+        <p>User 2</p>
+      </div>
+      <div class="story">
+        <img src="user3.jpg" alt="User 3">
+        <p>User 3</p>
+      </div>
+      <div class="story">
+        <img src="user4.jpg" alt="User 4">
+        <p>User 4</p>
+      </div>
+      <div class="add-story">
+        <i class="fas fa-plus-circle"></i>
+        <p>Add Story</p>
+      </div>
+    </div>
+
+    <div class="instagram-section">
+      <h2>Recent Posts</h2>
+
+      <div class="post">
+        <div class="comment">
+          <img src="user1.jpg" alt="User 1">
+          <p>Welcome to Octane people!!!</p>
+        </div>
+        <img src="post1.jpg" alt="Post 1">
+        <div class="post-info">
+          <div class="likes">
+            <i class="fas fa-heart"></i>
+            <span>245</span>
+          </div>
+          <div class="comments">
+            <i class="fas fa-comment"></i>
+            <span>32</span>
+          </div>
+        </div>
+        <div class="comments-section">
+          <div class="comment">
+            <img src="user1.jpg" alt="User 1">
+            <p>yep!</p>
+          </div>
+          <div class="comment">
+            <img src="user2.jpg" alt="User 2">
+            <p>damn son</p>
+          </div>
+          <div class="comment">
+            <img src="user3.jpg" alt="User 3">
+            <p>nice</p>
+          </div>
+          <div class="comment">
+            <img src="user4.jpg" alt="User 4">
+            <p>gg</p>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var heartIcon = document.querySelector('.fa-heart');
+        
+              heartIcon.addEventListener('click', function() {
+                heartIcon.classList.toggle('heart-pink');
+              });
+            });
+          </script>
+         
+
+     
+      
+          <div class="comment">
+            <img src="user2.jpg" alt="User 1">
+            <p>made something delicious!</p>
+          </div>
+        <img src="post2.jpg" alt="Post 2">
+        <div class="post-info">
+          <div class="likes">
+            <i class="fas fa-heart"></i>
+            <span>123</span>
+          </div>
+          <div class="comments">
+            <i class="fas fa-comment"></i>
+            <span>45</span>
+          </div>
+        </div>
+        <div class="comments-section">
+          <div class="comment">
+            <img src="user1.jpg" alt="User 1">
+            <p>nice!</p>
+          </div>
+          <div class="comment">
+            <img src="user2.jpg" alt="User 2">
+            <p>damn</p>
+          </div>
+          <div class="comment">
+            <img src="user3.jpg" alt="User 3">
+            <p>good job</p>
+          </div>
+          <div class="comment-input">
+            <img src="user1.jpg" alt="User 1">
+            <input type="text" placeholder="Add a comment">
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var heartIcon = document.querySelector('.fa-heart');
+    
+          heartIcon.addEventListener('click', function() {
+            heartIcon.classList.toggle('heart-pink');
+          });
+        });
+      </script>
+
+      <div class="post">
+        <div class="post">
+          <div class="comment">
+            <img src="user1.jpg" alt="User 1">
+            <p>hey my anime art!</p>
+          </div>
+        <img src="post3.jpg" alt="Post 3">
+        <div class="post-info">
+          <div class="likes">
+            <i class="fas fa-heart"></i>
+            <span>78</span>
+          </div>
+          <div class="comments">
+            <i class="fas fa-comment"></i>
+            <span>10</span>
+          </div>
+        </div>
+        <div class="comments-section">
+          <div class="comment">
+            <img src="user3.jpg" alt="User 1">
+            <p>make sure to focus on coloring</p>
+          </div>
+          <div class="comment-input">
+            <img src="user1.jpg" alt="User 1">
+            <input type="text" placeholder="Add a comment">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post">
+        <div class="comment">
+          <img src="post4.jpg" alt="User 1">
+          <p>hey my anime art! much better than yours lol</p>
+        </div>
+      <img src="post4.jpg" alt="Post 3">
+      <div class="post-info">
+        <div class="likes">
+          <i class="fas fa-heart"></i>
+          <span>69</span>
+        </div>
+        <div class="comments">
+          <i class="fas fa-comment"></i>
+          <span>10</span>
+        </div>
+      </div>
+      <div class="comments-section">
+        <div class="comment">
+          <img src="user1.jpg" alt="User 1">
+          <p>nice</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="post">
+      <div class="comment">
+        <img src="user1.jpg" alt="User 1">
+        <p>me+me=memes</p>
+      </div>
+    <img src="post5.jpg" alt="Post 3">
+    <div class="post-info">
+      <div class="likes">
+        <i id="heart-icon" class="fas fa-heart"></i>
+
+        <span>204</span>
+      </div>
+      <div class="comments">
+        <i class="fas fa-comment"></i>
+        <span>10</span>
+      </div>
+    </div>
+    <div class="comments-section">
+      <div class="comment">
+        <img src="post4.jpg" alt="User 1">
+        <p>lloolllll</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="post">
+  <div class="post">
+    <div class="comment">
+      <img src="post6.jpg" alt="User 1">
+      <p>my fav character!!!!!!!!</p>
+    </div>
+  <img src="post6.jpg" alt="Post 3">
+  <div class="post-info">
+    <div class="likes">
+      <i class="fas fa-heart"></i>
+      <span>56+</span>
+    </div>
+    <div class="comments">
+      <i class="fas fa-comment"></i>
+      <span>10</span>
+    </div>
+  </div>
+  <div class="comments-section">
+    <div class="comment">
+      <img src="user2.jpg" alt="User 1">
+      <p>mine too</p>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+    <div class="instagram-section">
+      <h2>Follow us on Instagram</h2>
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="post1.jpg" alt="Instagram 1">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="post2.jpg" alt="Instagram 2">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="post3.jpg" alt="Instagram 3">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="post4.jpg" alt="Instagram 4">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="post5.jpg" alt="Instagram 5">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+        <div class="instagram-item">
+          <img src="post6.jpg" alt="Instagram 6">
+          <div class="overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    
+    <div class="option-bar">
+      <i class="fas fa-home"></i>
+      <i class="fas fa-search"></i>
+      <i class="fas fa-plus-circle redirect-icon" onclick="redirectToWebsite()"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-user"></i>
+    </div>
+
+    <script>
+      function redirectToWebsite() {
+        window.location.href = 'https://forms.gle/HCv3YQMcgirqpZb57'; // Replace with your desired website URL
+      }
+    </script>
+
+    <style>
+      .discord-section {
+        background-color: #7289DA;
+        padding: 40px;
+        color: #FFF;
+        text-align: center;
+      }
+  
+      .discord-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+  
+      .discord-description {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+  
+      .discord-button {
+        background-color: #FFF;
+        color: #7289DA;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .discord-button:hover {
+        background-color: #EDEDED;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="discord-section">
+      <h2 class="discord-title">Join Our Discord Server</h2>
+      <p class="discord-description">Connect with our community on Discord to chat, share ideas, and stay updated!</p>
+      <button class="discord-button" onclick="redirectToDiscord()">Join Now</button>
+    </section>
+  
+    <script>
+      function redirectToDiscord() {
+        window.location.href = 'https://discord.gg/your-server-invite'; // Replace with your Discord server invite link
+      }
+    </script>
+  </body>
+  </main>
+</body>
+</html>
